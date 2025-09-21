@@ -1,0 +1,12 @@
+services:
+  notebooks:
+    image: brendanrius/jupyter-c-kernel
+    ports:
+      - "8888:8888"
+    volumes:
+      - "./notebooks:/home/jovyan/work"
+    restart: always
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=password
+      
